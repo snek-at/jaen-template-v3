@@ -102,20 +102,26 @@ const HotelItem = connectBlock(
 
           <VStack pt={10} spacing={6} align={"center"}>
             <Text
+              as="span"
               color={"gray.500"}
               fontSize={"sm"}
               textTransform={"uppercase"}
             >
               <Field.Text name={"lead"} defaultValue={"Lead"} label="Lead" />
             </Text>
-            <Heading fontSize={"3xl"} fontFamily={"heading"} fontWeight={500}>
+            <Heading
+              fontSize={"3xl"}
+              fontFamily={"heading"}
+              fontWeight={500}
+              as="span"
+            >
               <Field.Text
                 name={"title"}
                 defaultValue={"City Pension"}
                 label="Heading"
               />
             </Heading>
-            <Text color={"gray.500"} textAlign="center">
+            <Text color={"gray.500"} textAlign="center" as="span">
               <Field.Text
                 name={"address"}
                 defaultValue={"Addresse"}
@@ -220,7 +226,7 @@ export default connectPage(
           align={"center"}
         >
           <Heading
-            as="h2"
+            as="span"
             size="xs"
             textTransform="uppercase"
             fontWeight={"thin"}
@@ -230,7 +236,7 @@ export default connectPage(
           </Heading>
           <Heading
             w="full"
-            as="h1"
+            as="span"
             fontSize={{
               base: "2xl",
               md: "3xl",
@@ -247,7 +253,7 @@ export default connectPage(
             />
           </Heading>
           <Heading
-            as="h2"
+            as="span"
             size="xs"
             textTransform="uppercase"
             fontWeight={"thin"}
