@@ -1,5 +1,24 @@
 {
-  "site": {},
+  "site": {
+    "siteMetadata": {
+      "title": "Vienna's Finest Hotels - Your Gateway to the Best Hotels in Vienna",
+      "siteUrl": "https://vienna-hotels.com",
+      "description": "Discover Vienna's best hotels for a stylish stay. Book with ease and get all the details you need on our user-friendly site.",
+      "author": {
+        "name": ""
+      },
+      "organization": {
+        "name": "",
+        "url": ""
+      }
+    }
+  },
   "widgets": [],
-  "migrationHistory": []
+  "migrationHistory": [
+    {
+      "createdAt": "2023-05-02T20:41:07.287Z",
+      "fileUrl": "https://osg.snek.at/storage/BQACAgQAAxkDAAIV2WRRdVEl_IGY0vD5mThYATP92QwFAALADAAC9maJUtHz_LjHxXeGLwQ"
+    }
+  ],
+  "finderUrl": "https://osg.snek.at/storage/BQACAgQAAxkDAAIV2GRRdVEjhJ0_b36APU4tsDBi5rbhAAK_DAAC9maJUnKuVJ8Ci86nLwQ"
 }

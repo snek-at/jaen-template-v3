@@ -10,7 +10,7 @@ const config: GatsbyConfig = {
     DEV_SSR: false,
   },
   siteMetadata: {
-    title: `ballons-and-ballons`,
+    title: `vienna-hotels`,
     siteUrl: `https://www.yourdomain.tld`,
   },
   jsxRuntime: "automatic",
