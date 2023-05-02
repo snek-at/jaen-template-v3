@@ -1,15 +1,57 @@
-import type { GatsbyConfig } from "gatsby"
+import type { GatsbyConfig } from "gatsby";
+import { JaenSource } from "jaen-utils";
+import { IJaenPage } from "@snek-at/jaen";
+
+JaenSource.jaenData.read();
+const siteUrl = JaenSource.jaenData.internal?.site?.siteMetadata?.siteUrl || "";
 
 const config: GatsbyConfig = {
+  flags: {
+    DEV_SSR: false,
+  },
   siteMetadata: {
-    title: `jaen-template`,
+    title: `ballons-and-ballons`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
-  // If you use VSCode you can also use the GraphQL plugin
-  // Learn more at: https://gatsby.dev/graphql-typegen
-  graphqlTypegen: true,
-  plugins: [],
-}
+  jsxRuntime: "automatic",
+  plugins: [
+    {
+      resolve: `gatsby-plugin-jaen`,
+      options: {
+        snekResourceId: `63571eee-f41c-4745-9130-d746c2cb97a3`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        excludes: [`/jaen/admin`, `/_`],
+        query: `
+          {
+            allSitePage {
+              nodes {
+                path
+              }
+            }
+          }`,
+        resolveSiteUrl: () => siteUrl,
+        resolvePages: ({
+          allSitePage: { nodes: allPages },
+        }: {
+          allSitePage: { nodes: IJaenPage[] };
+        }) => {
+          return allPages.map((page) => {
+            return { ...page };
+          });
+        },
+        serialize: ({ path, modifiedGmt }: any) => {
+          return {
+            url: path,
+            lastmod: modifiedGmt,
+          };
+        },
+      },
+    },
+  ],
+};
 
-export default config
+export default config;
