@@ -128,7 +128,7 @@ const HotelItem = connectBlock(
                 label="Address"
               />
             </Text>
-            <Box height={16} w="full">
+            <Box height={16} w="150px">
               <Field.Image
                 name={"logoimage"}
                 label="Logo"
