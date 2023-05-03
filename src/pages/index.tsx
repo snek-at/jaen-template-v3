@@ -1,10 +1,7 @@
 import { StarIcon } from "@chakra-ui/icons";
 import {
   Box,
-  BoxProps,
-  Center,
   Container,
-  Flex,
   HStack,
   Heading,
   Link,
@@ -16,13 +13,13 @@ import {
   ModalOverlay,
   Stack,
   Text,
-  VStack,
   useColorModeValue,
-  useDisclosure,
+  useDisclosure
 } from "@chakra-ui/react";
-import { Field, connectBlock, connectPage, useField } from "@snek-at/jaen";
+import { Field, connectPage } from "@snek-at/jaen";
 import { graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import { HotelItems } from "../components/organisms";
 
 const StarsDivider = () => (
   <HStack pt="4">
@@ -34,178 +31,6 @@ const StarsDivider = () => (
 
 const IMAGE =
   "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2l0eXxlbnwwfHwwfHw%3D&w=1000&q=80";
-
-const HotelItem = connectBlock(
-  (props: BoxProps) => {
-    const hiddenUrlField = useField<string>("hiddenUrl", "IMA:TextField");
-
-    const card = (
-      <Center py={12}>
-        <Box
-          role={"group"}
-          p={6}
-          bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
-          rounded={"lg"}
-          pos={"relative"}
-          zIndex={1}
-        >
-          <Box
-            rounded={"lg"}
-            mt={-12}
-            pos={"relative"}
-            boxSize={{
-              // Set the box size to 12rem for screens smaller than md (300px / 25px = 12rem)
-              base: "12rem",
-              // Set the box size to 14rem for screens equal to or larger than md, but smaller than lg
-              md: "14rem",
-              // Set the box size to 16rem for screens equal to or larger than lg, but smaller than xl
-              lg: "16rem",
-              // Set the box size to 18rem for screens equal to or larger than xl, but smaller than 2xl
-              xl: "18rem",
-              // Set the box size to 20rem for screens equal to or larger than 2xl (500px / 25px = 20rem)
-              "2xl": "28rem",
-            }}
-            _after={{
-              transition: "all .3s ease",
-              content: '""',
-              w: "full",
-              h: "full",
-              pos: "absolute",
-              top: 5,
-              left: 0,
-              backgroundImage: `url(${IMAGE})`,
-              filter: "blur(15px)",
-              zIndex: -1,
-            }}
-            _groupHover={{
-              _after: {
-                filter: "blur(20px)",
-              },
-            }}
-          >
-            <Field.Image
-              name={"image"}
-              label="Image"
-              style={{
-                width: "100%",
-                objectFit: "cover",
-                height: "50%",
-                borderRadius: "1em",
-              }}
-              imgStyle={{
-                borderRadius: "1em",
-              }}
-              defaultValue={undefined}
-            />
-          </Box>
-
-          <VStack pt={10} spacing={6} align={"center"}>
-            <Text
-              as="span"
-              color={"gray.500"}
-              fontSize={"sm"}
-              textTransform={"uppercase"}
-            >
-              <Field.Text name={"lead"} defaultValue={"Lead"} label="Lead" />
-            </Text>
-            <Heading
-              fontSize={"3xl"}
-              fontFamily={"heading"}
-              fontWeight={500}
-              as="span"
-            >
-              <Field.Text
-                name={"title"}
-                defaultValue={"City Pension"}
-                label="Heading"
-              />
-            </Heading>
-            <Text color={"gray.500"} textAlign="center" as="span">
-              <Field.Text
-                name={"address"}
-                defaultValue={"Addresse"}
-                label="Address"
-              />
-            </Text>
-            <Box height={16} w="150px">
-              <Field.Image
-                name={"logoimage"}
-                label="Logo"
-                objectFit={"contain"}
-                imgStyle={{
-                  objectFit: "contain",
-                }}
-                defaultValue={undefined}
-              />
-            </Box>
-            <Field.Text name="hiddenUrl" defaultValue="Empty" label="URL" />
-          </VStack>
-        </Box>
-      </Center>
-    );
-
-    const value = (
-      hiddenUrlField.value ||
-      hiddenUrlField.staticValue ||
-      ""
-    ).replace(/<\/?[^>]+(>|$)/g, "");
-
-    if (hiddenUrlField.isEditing || !value) {
-      return card;
-    }
-
-    return (
-      <a href={value} target="_blank">
-        {card}
-      </a>
-    );
-  },
-  {
-    name: "HotelCard",
-    label: "Hotel Card",
-  }
-);
-
-const HotelItems = () => {
-  return (
-    <>
-      <Field.Section
-        name="hotelfield"
-        label="Hotels"
-        as={VStack}
-        props={{
-          display: {
-            base: "flex",
-            md: "none",
-          },
-        }}
-        blocks={[HotelItem]}
-      />
-      <Field.Section
-        name="hotelfield"
-        label="Hotels"
-        as={Flex}
-        props={{
-          display: {
-            base: "none",
-            md: "flex",
-          },
-        }}
-        sectionProps={(props) => ({
-          m: 2,
-          mt:
-            props.count === 1 || props.count === props.totalSections
-              ? undefined
-              : 16,
-          w: `${100 / props.totalSections}%`,
-          objectFit: "cover",
-        })}
-        blocks={[HotelItem]}
-      />
-    </>
-  );
-};
 
 export default connectPage(
   () => {
