@@ -16,6 +16,14 @@ const config: GatsbyConfig = {
   jsxRuntime: "automatic",
   plugins: [
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "iamges",
+        path: `${__dirname}/src/images/`,
+      },
+    },
+
+    {
       resolve: `gatsby-plugin-jaen`,
       options: {
         snekResourceId: `63571eee-f41c-4745-9130-d746c2cb97a3`,

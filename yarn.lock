@@ -3614,10 +3614,10 @@
     escape-string-regexp "^2.0.0"
     lodash.deburr "^4.1.0"
 
-"@snek-at/jaen@^0.0.42":
-  version "0.0.42"
-  resolved "https://registry.yarnpkg.com/@snek-at/jaen/-/jaen-0.0.42.tgz#9d3abba92071bba19af41ad3e4479f764a2948af"
-  integrity sha512-dLFaSeVKSBLI9f1ZDOlaB7hsbpA0AgnfPW8OOTg51XA9xjaZlBRlYCEGCJxn4VD49p03Di7bJrQBXI8dLEpkuw==
+"@snek-at/jaen@^0.0.43":
+  version "0.0.43"
+  resolved "https://registry.yarnpkg.com/@snek-at/jaen/-/jaen-0.0.43.tgz#d79a7a0966a11efab912e273fd5b7cda3c395f90"
+  integrity sha512-lu/XSZfTKPnIgS/t37Q1rW7OCkLm/7XxYkHZF2KjuJ6OyI3ogfFb6AzLcilmFXkWZHF4X5DaMzrrNdwtbsri4w==
   dependencies:
     "@chakra-ui/icons" "^2.0.18"
     "@chakra-ui/pro-theme" "^0.0.64"

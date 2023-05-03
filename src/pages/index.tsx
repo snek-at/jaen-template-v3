@@ -14,7 +14,7 @@ import {
   Stack,
   Text,
   useColorModeValue,
-  useDisclosure
+  useDisclosure,
 } from "@chakra-ui/react";
 import { Field, connectPage } from "@snek-at/jaen";
 import { graphql } from "gatsby";
@@ -28,9 +28,6 @@ const StarsDivider = () => (
     ))}
   </HStack>
 );
-
-const IMAGE =
-  "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2l0eXxlbnwwfHwwfHw%3D&w=1000&q=80";
 
 export default connectPage(
   () => {

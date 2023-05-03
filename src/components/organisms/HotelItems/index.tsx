@@ -12,7 +12,7 @@ export const HotelItems = () => {
         props={{
           display: {
             base: "flex",
-            md: "none",
+            lg: "none",
           },
         }}
         blocks={[HotelItem]}
@@ -30,7 +30,7 @@ export const HotelItems = () => {
         props={{
           display: {
             base: "none",
-            md: "flex",
+            lg: "flex",
           },
         }}
         sectionProps={(props) => ({

@@ -16,7 +16,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@snek-at/jaen": "^0.0.42",
+    "@snek-at/jaen": "^0.0.43",
     "gatsby": "^5.9.0",
     "gatsby-plugin-jaen": "^0.0.15",
     "gatsby-plugin-sharp": "^5.9.0",
