@@ -100,7 +100,7 @@ export const HotelItem = connectBlock(
               defaultValue="Empty"
               label="URL"
               style={{
-                display: "none",
+                display: hiddenUrlField.isEditing ? "block" : "none",
               }}
             />
           </VStack>
