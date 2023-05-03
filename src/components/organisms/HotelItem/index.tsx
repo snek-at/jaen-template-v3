@@ -18,7 +18,15 @@ export const HotelItem = connectBlock(
     const hiddenUrlField = useField<string>("hiddenUrl", "IMA:TextField");
 
     const card = (
-      <Center maxW="20rem" padding="1rem" height="100%">
+      <Center
+        maxW={{
+          base: "100%",
+          md: "sm",
+          lg: "md",
+        }}
+        padding="1rem"
+        height="100%"
+      >
         <Box
           role="group"
           bg={useColorModeValue("white", "gray.800")}
@@ -102,9 +110,13 @@ export const HotelItem = connectBlock(
     }
 
     return (
-      <a href={value} target="_blank" style={{
-        height: "100%",
-      }}>
+      <a
+        href={value}
+        target="_blank"
+        style={{
+          height: "100%",
+        }}
+      >
         {card}
       </a>
     );
