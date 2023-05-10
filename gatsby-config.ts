@@ -3,7 +3,7 @@ import { JaenSource } from "jaen-utils";
 import { IJaenPage } from "@snek-at/jaen";
 
 JaenSource.jaenData.read();
-const siteUrl = JaenSource.jaenData.internal?.site?.siteMetadata?.siteUrl || "";
+const siteUrl = JaenSource.jaenData.internal?.siteMetadata?.siteUrl || "";
 
 const config: GatsbyConfig = {
   flags: {
