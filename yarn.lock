@@ -3614,10 +3614,10 @@
     escape-string-regexp "^2.0.0"
     lodash.deburr "^4.1.0"
 
-"@snek-at/jaen@^0.0.43":
-  version "0.0.43"
-  resolved "https://registry.yarnpkg.com/@snek-at/jaen/-/jaen-0.0.43.tgz#d79a7a0966a11efab912e273fd5b7cda3c395f90"
-  integrity sha512-lu/XSZfTKPnIgS/t37Q1rW7OCkLm/7XxYkHZF2KjuJ6OyI3ogfFb6AzLcilmFXkWZHF4X5DaMzrrNdwtbsri4w==
+"@snek-at/jaen@^0.0.45":
+  version "0.0.45"
+  resolved "https://registry.yarnpkg.com/@snek-at/jaen/-/jaen-0.0.45.tgz#1c4b05c2c7d26a9d6a083040a8f076f72eade724"
+  integrity sha512-9UpPwHvd8zJqDzwCnEL3lWhQB0bxPt6eIl0zHEQCqCxQw3iH3bmziZmgPumc/XCKlYWsemaVEjl0UpaK7ho4sA==
   dependencies:
     "@chakra-ui/icons" "^2.0.18"
     "@chakra-ui/pro-theme" "^0.0.64"
@@ -7251,10 +7251,10 @@ gatsby-plugin-image@^3:
     objectFitPolyfill "^2.3.5"
     prop-types "^15.8.1"
 
-gatsby-plugin-jaen@^0.0.15:
-  version "0.0.15"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-jaen/-/gatsby-plugin-jaen-0.0.15.tgz#1204ff6abd9c905229fa71ad2fc926db4e87e142"
-  integrity sha512-wDYoGva/tvmFkVBZr6iPe3h09QCg3qZo1RnBN8Ua4sOdyU6N8O5vgRfM0Cyl6xOV9U9t7aYbo8UdoeVxsLWMXg==
+gatsby-plugin-jaen@^0.0.17:
+  version "0.0.17"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-jaen/-/gatsby-plugin-jaen-0.0.17.tgz#4b8505f3f6e220eb7016d973e0a670df2827c3ed"
+  integrity sha512-8ttEknfAG8q0qMisFHN3Ikx18gTFDj1ne74jGw0+asI52XXdPdsAp55lqgam+X3zoukB0Nrf/8KHv8gK3b3cXg==
   dependencies:
     "@chakra-ui/gatsby-plugin" "^3.1.1"
     gatsby-plugin-compile-es6-packages "^2.1.1"

@@ -1,16 +1,14 @@
 {
-  "site": {
-    "siteMetadata": {
-      "title": "Vienna's Finest Hotels - Your Gateway to the Best Hotels in Vienna",
-      "siteUrl": "https://vienna-hotels.com",
-      "description": "Discover Vienna's best hotels for a stylish stay. Book with ease and get all the details you need on our user-friendly site.",
-      "author": {
-        "name": ""
-      },
-      "organization": {
-        "name": "",
-        "url": ""
-      }
+  "siteMetadata": {
+    "title": "Vienna's Finest Hotels - Your Gateway to the Best Hotels in Vienna",
+    "siteUrl": "https://vienna-hotels.com",
+    "description": "Discover Vienna's best hotels for a stylish stay. Book with ease and get all the details you need on our user-friendly site.",
+    "author": {
+      "name": ""
+    },
+    "organization": {
+      "name": "",
+      "url": ""
     }
   },
   "widgets": [],
